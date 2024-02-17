@@ -20,17 +20,40 @@
 
   <body>
     <form>
-      Name:
-      <input type="text" id="name" name="name">
-
-      Age:
-      <input type="number" id="age" name="age">
-
-      Comment:
-      <input type="text" id="comment" name="comment">
-
-      Email:
-      <input type="email" id="email" name="email">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <ul>
+          <li>
+            <label for="name">
+              <span>Name:</span>
+            </label>
+            <input type="text" id="name" name="name">
+          </li>
+          <li>
+            <label>
+              <span>Age:</span>
+            </label>
+            <input type="number" id="age" name="age">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Comment Information</legend>
+        <ul>
+          <li>
+            <label for="comment">
+              <span>Comment:</span>
+            </label>
+            <input type="text" id="comment" name="comment">
+          </li>
+          <li>
+            <label for="email">
+              <span>Email:</span>
+            </label>
+            <input type="email" id="email" name="email">
+          </li>
+        </ul>
+      </fieldset>
     </form>
   </body>
 
