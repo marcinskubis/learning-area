@@ -20,7 +20,15 @@
       </section>
 
       <script>
+        let superHeroes;
+        async function fetchJSON(){
+          const requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+          const request = new Request(requestURL);
 
+          const response = await fetch(request);
+          const json = await response.json();
+          superHeroes = json;
+        }
       </script>
   </body>
 </html>

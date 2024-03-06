@@ -39,9 +39,18 @@
     .then(text => displayCatInfo(text))
 
     function displayCatInfo(catString) {
+      const cats = JSON.parse(catString);
       let total = 0;
       let male = 0;
-
+      cats.forEach(cat => {
+        motherInfo += cat.name === 'Antonia' ? `and ${cat.name}.` : `${cat.name}, `;
+        const catKittens = cat.kittens;
+        catKittens.forEach(kitten => {
+          total++;
+          if(kitten.gender === 'm') male++;
+        });
+      });
+      kittenInfo = `Total: ${total}, Males: ${male}.`
       // Add your code here
 
       // Don't edit the code below here!
